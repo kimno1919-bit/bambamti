@@ -17,8 +17,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ success: false, error: 'GEMINI_API_KEY 환경 변수가 설정되지 않았습니다.' });
   }
 
-  // Gemini API 요청 URL (gemini-2.5-pro 모델)
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent?key=${apiKey}`;
+  // Gemini API 요청 URL
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=${apiKey}`;
 
   // 프롬프트 구성
   const prompt = `당신은 교사를 돕는 "AI 학생 상담 전략 도우미"입니다.
