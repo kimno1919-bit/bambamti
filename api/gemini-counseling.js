@@ -1,4 +1,4 @@
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // POST 요청만 허용
   if (req.method !== 'POST') {
     return res.status(405).json({ success: false, error: 'POST 요청만 허용됩니다.' });
